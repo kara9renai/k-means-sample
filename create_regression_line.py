@@ -4,7 +4,7 @@ import pandas as pd
 
 
 # csvファイルは任意のものを選ぶ
-df = pd.read_csv("csv/Group_B/ggap_tfp_sgp.csv")
+df = pd.read_csv("csv/Group_A/ggap_tfp_???.csv")
 
 x = df[["ggap"]]
 y = df[["tfp"]]
@@ -14,7 +14,8 @@ model_lr.fit(x,y)
 
 plt.plot(x, y, 'o')
 plt.plot(x, model_lr.predict(x), linestyle="solid")
-plt.title("Regression Analysis in Singapore")
+# タイトルも任意のものを選ぶ
+plt.title("Regression Analysis in ???")
 plt.show()
 
 print('モデル関数の回帰変数 w1: %.3f' %model_lr.coef_)
